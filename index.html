@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Бонусная карта 6F Wear — 2500 ₽</title>
+  <meta name="description" content="Оформите бонусную карту 6F Wear: 2500 рублей бонусов. Город, клуб, телефон — и карта на почте." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oswald:wght@500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f0f1f3;
+      --ink: #111;
+      --muted: rgba(17, 17, 17, 0.58);
+      --line: #111;
+      --accent: #e10600;
+      --accent-dark: #9b1c2c;
+      --card-night: #141414;
+      --paper: #fff;
+      --safe-b: env(safe-area-inset-bottom, 0px);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Manrope, system-ui, sans-serif;
+    }
+    body {
+      background:
+        radial-gradient(1200px 520px at 80% -10%, rgba(225, 6, 0, 0.12), transparent 60%),
+        linear-gradient(180deg, #e8eaee 0%, var(--bg) 42%, #e4e6ea 100%);
+    }
+    a { color: inherit; }
+
+    .wrap {
+      width: min(440px, 100%);
+      margin: 0 auto;
+      padding: 1.25rem 1rem calc(2rem + var(--safe-b));
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .brand-mark {
+      font-family: Unbounded, sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .brand-mark span { color: var(--accent); }
+    .brand a {
+      font-family: Oswald, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      opacity: 0.55;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #0d0d0d;
+      aspect-ratio: 16 / 10;
+      min-height: 220px;
+      animation: rise 0.7s ease both;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 70% at 70% 30%, rgba(225, 6, 0, 0.45), transparent 55%),
+        linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 55%, #2a0a0a 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          -18deg,
+          transparent 0,
+          transparent 14px,
+          rgba(255, 255, 255, 0.03) 14px,
+          rgba(255, 255, 255, 0.03) 15px
+        );
+      pointer-events: none;
+    }
+
+    .plastic {
+      position: absolute;
+      left: 50%;
+      top: 52%;
+      width: min(86%, 340px);
+      aspect-ratio: 1.68 / 1;
+      transform: translate(-50%, -50%) rotate(-6deg);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.08), transparent 40%),
+        linear-gradient(160deg, #1b1b1b 0%, #101010 45%, #2b0d10 100%);
+      box-shadow:
+        0 28px 50px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      padding: 1.1rem 1.2rem;
+      color: #fff;
+      animation: card-in 0.9s 0.15s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+    .plastic-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .plastic-brand {
+      font-family: Unbounded, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .plastic-chip {
+      width: 2.2rem;
+      height: 1.55rem;
+      border-radius: 0.25rem;
+      background: linear-gradient(135deg, #d7b56d, #8f6b2c 45%, #f0d9a0 70%, #a07a35);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.25);
+    }
+    .plastic-bonus {
+      margin-top: 1.35rem;
+      font-family: Oswald, sans-serif;
+      font-size: clamp(1.7rem, 7vw, 2.15rem);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .plastic-bonus em {
+      font-style: normal;
+      color: #ff4d45;
+    }
+    .plastic-sub {
+      margin-top: 0.45rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.65;
+    }
+    .plastic-row {
+      position: absolute;
+      left: 1.2rem;
+      right: 1.2rem;
+      bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .panel {
+      margin-top: 1.25rem;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 1.35rem 1.15rem 1.25rem;
+      animation: rise 0.7s 0.12s ease both;
+    }
+    h1 {
+      margin: 0;
+      font-family: Unbounded, sans-serif;
+      font-size: clamp(1.35rem, 5.5vw, 1.7rem);
+      line-height: 1.15;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .lead {
+      margin: 0.85rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+    .lead strong { color: var(--ink); font-weight: 700; }
+
+    form { margin-top: 1.35rem; display: grid; gap: 0.95rem; }
+    label {
+      display: grid;
+      gap: 0.4rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+    .field {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 0.85rem 0.95rem;
+      font: inherit;
+      font-size: 1rem;
+      outline: none;
+      transition: box-shadow 0.15s ease;
+    }
+    .field:focus { box-shadow: 4px 4px 0 0 #111; }
+
+    .consent {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: rgba(17, 17, 17, 0.78);
+      font-weight: 500;
+    }
+    .consent input {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-top: 0.15rem;
+      accent-color: var(--accent);
+    }
+    .consent a { text-underline-offset: 2px; }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      padding: 1rem 1.1rem;
+      font-family: Oswald, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .btn:hover { background: #000; }
+    .btn:active { transform: translateY(1px); }
+    .btn:disabled { opacity: 0.55; cursor: wait; }
+
+    .note {
+      margin: 1.1rem 0 0;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(17, 17, 17, 0.12);
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+
+    .done {
+      display: none;
+      margin-top: 1.25rem;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 1.35rem 1.15rem;
+      animation: rise 0.45s ease both;
+    }
+    .done h2 {
+      margin: 0;
+      font-family: Unbounded, sans-serif;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .done p {
+      margin: 0.75rem 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .is-done .panel,
+    .is-done .hero { display: none; }
+    .is-done .done { display: block; }
+
+    .foot {
+      margin-top: 1.35rem;
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(17, 17, 17, 0.45);
+    }
+    .foot a { color: inherit; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes card-in {
+      from { opacity: 0; transform: translate(-50%, -42%) rotate(-10deg) scale(0.94); }
+      to { opacity: 1; transform: translate(-50%, -50%) rotate(-6deg) scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero, .panel, .plastic, .done { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" id="app">
+    <header class="brand">
+      <div class="brand-mark">6F <span>Wear</span></div>
+      <a href="https://6fwear.ru/" target="_blank" rel="noopener noreferrer">Магазин</a>
+    </header>
+
+    <section class="hero" aria-label="Бонусная карта 6F">
+      <div class="plastic" aria-hidden="true">
+        <div class="plastic-top">
+          <div class="plastic-brand">6F Wear</div>
+          <div class="plastic-chip"></div>
+        </div>
+        <div class="plastic-bonus"><em>2 500 ₽</em><br />бонусов</div>
+        <div class="plastic-sub">Bonus card · club athlete</div>
+        <div class="plastic-row">
+          <span>Member</span>
+          <span>RU · 6F</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h1>Оформите бонусную карту</h1>
+      <p class="lead">
+        Бонусная карта 6F Wear с приветственными бонусами
+        <strong>2&nbsp;500&nbsp;₽</strong> — для спортсменов и клубов.
+      </p>
+
+      <form id="bonus-form" novalidate>
+        <label>
+          Город
+          <input class="field" name="city" type="text" autocomplete="address-level2" required maxlength="80" placeholder="Например, Новосибирск" />
+        </label>
+        <label>
+          Название клуба
+          <input class="field" name="club" type="text" autocomplete="organization" required maxlength="120" placeholder="Клуб / секция / команда" />
+        </label>
+        <label>
+          Номер телефона
+          <input class="field" name="phone" type="tel" autocomplete="tel" required maxlength="32" placeholder="+7 ___ ___-__-__" />
+        </label>
+        <label>
+          Электронная почта
+          <input class="field" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="name@example.com" />
+        </label>
+
+        <label class="consent">
+          <input type="checkbox" name="consent" required />
+          <span>
+            Ознакомлен(а) с
+            <a href="https://6fwear.ru/legal/" target="_blank" rel="noopener noreferrer">политикой конфиденциальности и условиями соглашения</a>
+            6F Wear. Подтверждаю, что данные указаны верно и даю согласие на их обработку для оформления бонусной карты, связи по заявке и направления данных карты на почту. В договоре / условиях магазина зафиксированы правила обработки персональных данных, возврата и условия индивидуальных заказов.
+          </span>
+        </label>
+
+        <button class="btn" type="submit" id="submit-btn">Оформить карту</button>
+      </form>
+
+      <p class="note">
+        После оформления данные бонусной карты и инструкция по активации придут на указанную электронную почту.
+        Обычно письмо приходит в течение нескольких минут — проверьте папку «Спам», если его нет во «Входящих».
+      </p>
+    </section>
+
+    <section class="done" id="done" role="status" aria-live="polite">
+      <h2>Заявка принята</h2>
+      <p>
+        Спасибо! Мы получили данные для бонусной карты. Письмо с картой и инструкцией отправлено на вашу почту.
+        Если письмо не пришло — напишите на
+        <a href="mailto:haf@6fwear.com">haf@6fwear.com</a>
+        или позвоните
+        <a href="tel:+78006001628">8&nbsp;800&nbsp;600-16-28</a>.
+      </p>
+    </section>
+
+    <p class="foot">
+      6F Wear ·
+      <a href="https://6fwear.ru/legal/" target="_blank" rel="noopener noreferrer">Документы</a>
+      · Черновик лендинга
+    </p>
+  </main>
+
+  <script>
+    (function () {
+      var form = document.getElementById("bonus-form");
+      var app = document.getElementById("app");
+      var btn = document.getElementById("submit-btn");
+      if (!form || !app || !btn) return;
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        btn.disabled = true;
+        btn.textContent = "Отправляем…";
+        window.setTimeout(function () {
+          app.classList.add("is-done");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 450);
+      });
+    })();
+  </script>
+</body>
+</html>
